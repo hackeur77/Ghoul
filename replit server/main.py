@@ -60,4 +60,4 @@ def add():
     return "done"
 
 
-app.run(host='192.168.1.85', port=port)
+app.run(host='0.0.0.0', port=port)
