@@ -24,9 +24,11 @@ def getall():
 @app.route("/get", methods=['GET'])
 def get():
     
-    headers = request.get_headers()
+    headers = request.headers
 
-    if headers is None or "username" not in headers or len(headers) != 1 or type(headers['username']) != str:
+    print(headers)
+
+    if headers is None or "Username" not in headers or len(headers) != 1 or type(headers['username']) != str:
         return 'invalid headers', 400
 
     username = headers['username']
