@@ -12,7 +12,7 @@
 <p align="center">
   <strong>Ghoul is an easy to use Dox service, allowing you to get/add information on people</strong>
   <br>
-  <strong>directly from your terminal. It communicates with a HTTP Server hosted by me on replit.</strong>
+  <strong>directly from your terminal. It communicates with a HTTP Server (API) hosted by me on replit.</strong>
 </p>
 <br>
 
