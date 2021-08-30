@@ -8,7 +8,7 @@ class Database:
         r = Difference.getfromlist(username, list(data.keys()), diff=2, max=1)
         if len(r) == 1:
             r = r[0]
-            return "Username: {}\n".format(r), data[r]
+            return "Username: {}\n\n".format(r), data[r]
         return False
 
 
