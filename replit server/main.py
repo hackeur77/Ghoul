@@ -54,7 +54,7 @@ def add():
     if len(data) > 100:
         return 'maximum length of data', 400
 
-    Database.add(username)
+    Database.add(username, data)
 
     return "done"
 
