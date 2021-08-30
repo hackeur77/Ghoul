@@ -31,11 +31,12 @@ def get():
 
     username = json['username']
 
-    if Database.check(username) is False:
+    usr = Database.get(username)
+    if usr is False:
         return 'username not found', 403
 
     else:
-        return Database.get(username)
+        return usr
 
 
 @app.route("/add", methods=['POST'])
