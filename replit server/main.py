@@ -13,23 +13,21 @@ def main():
 
 
 
-
-
 @app.route("/getall", methods=['GET'])
 def getall():
     return Database.getall()
 
 
 
-@app.route("/get", methods=['GET'])
+@app.route("/get", methods=['POST'])
 def get():
     
-    headers = request.headers
+    json = request.get_json()
 
-    if headers is None or "Username" not in headers or type(headers['username']) != str:
-        return 'invalid headers', 400
+    if json is None or "username" not in json or len(json) != 1 or type(json['username']) != str:
+        return 'invalid json', 400
 
-    username = headers['username']
+    username = json['username']
 
     usr = Database.get(username)
     if usr is False:
