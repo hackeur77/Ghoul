@@ -1,18 +1,18 @@
 -----
 
 <p align="center">
-<img src="link", width="500", height="500">
+<img src="https://repository-images.githubusercontent.com/401381093/06ff31b0-5540-4775-bf79-6abd1ac1b33f", width="500", height="500">
 </p>
 
 -----
 
-### <p align="center">🌍 Title 🌍</p>
+### <p align="center">👻 Ghoul 👻</p>
 
 <br><br>
 <p align="center">
-  <strong>text</strong>
+  <strong>Ghoul is an easy to use Dox service, allowing you to get/add information on people</strong>
   <br>
-  <strong>text</strong>
+  <strong>from your terminal. It communicates with a HTTP Server hosted by me on replit.</strong>
 </p>
 <br>
 
@@ -21,23 +21,23 @@
 ### <p align="center">⭐ Features ⭐</p>
 
 <br><br>
-<strong>+ plus</strong>
+<strong>+ Fast</strong>
 <br>
-<strong>+ plus</strong>
+<strong>+ Easy to use</strong>
 <br>
-<strong>+ plus</strong>
+<strong>+ No moderation, you can't get banned from the service</strong>
 <br>
 
 <p align="right">
-<img src="link" width="250", height="250">
+<img src="https://repository-images.githubusercontent.com/401381093/06ff31b0-5540-4775-bf79-6abd1ac1b33f" width="250", height="250">
 </p>
 
 <br>
-<strong>- minus</strong>
+<strong>- Sometimes the API is down or will get restarted and all the data will be deleted</strong>
 <br>
-<strong>- minus</strong>
+<strong>- Only accessible from terminal</strong>
 <br>
-<strong>- minus</strong>
+<strong>- Everyone can add information</strong>
 <br><br>
 
 -----
@@ -47,8 +47,7 @@
 <p align="center"><strong>Feel free to make a pull request on this repository to submit any idea!</strong</p>
 
 <br><br>
-* idea
-* idea
+* Stock the data
 <br><br>
 
 -----
