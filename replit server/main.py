@@ -13,8 +13,8 @@ def main():
 
 
 
-@app.route("/getall", methods=['GET'])
-def getall():
+@app.route("/all", methods=['GET'])
+def all():
     return Database.getall()
 
 
