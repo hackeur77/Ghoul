@@ -26,9 +26,7 @@ def get():
     
     headers = request.headers
 
-    print(headers)
-
-    if headers is None or "Username" not in headers or len(headers) != 1 or type(headers['username']) != str:
+    if headers is None or "Username" not in headers or type(headers['username']) != str:
         return 'invalid headers', 400
 
     username = headers['username']
