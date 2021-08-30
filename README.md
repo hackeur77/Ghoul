@@ -33,7 +33,9 @@
 </p>
 
 <br>
-<strong>- Sometimes the API is down or will get restarted and all the data will be deleted</strong>
+<strong>- When the HTTP server will get restarted and all the data will be deleted</strong>
+<br>
+<strong>- Sometimes the HTTP server (API) is down. Check his availability <a href="Ghoul.billythegoat356.repl.co">here</a></strong>
 <br>
 <strong>- Only accessible from terminal</strong>
 <br>
