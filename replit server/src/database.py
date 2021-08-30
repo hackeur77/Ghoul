@@ -5,9 +5,9 @@ data = {"billy": "hacker"}
 
 class Database:
     def get(username: str):
-        r = Difference.getfromlist(username, data, diff=2, max=1)
+        r = Difference.getfromlist(username, list(data.keys()), diff=2, max=1)
         if len(r) == 1:
-            return r
+            return data[r]
         return False
 
 
