@@ -14,7 +14,7 @@ class Database:
 
     def add(username: str, content: str):
         r = Database.get(username)
-        c = "" if r is False else r
+        c = "" if r is False else r + "\n\n"
         data[username] = c + content
         return True
 
