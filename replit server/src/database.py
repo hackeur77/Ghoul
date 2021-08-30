@@ -1,15 +1,10 @@
-from pydifference import Difference
-
-
 data = {"billy": "hacker"}
 
 
 class Database:
     def get(username: str):
-        r = Difference.getfromlist(username, list(data.keys()), diff=2, max=1)
-        if len(r) == 1:
-            r = r[0]
-            return "Username: {}\n\n".format(r) + data[r]
+        if username in data:
+          return data[username]
         return False
 
     def add(username: str, content: str):
