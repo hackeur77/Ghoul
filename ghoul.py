@@ -17,7 +17,7 @@ from requests import get, post
 from os import name, system
 from random import shuffle
 from base64 import b64decode as bd
-
+from webbrowser import open as openb
 
 
 def clear(): system("cls" if name == 'nt' else "clear")
@@ -129,8 +129,8 @@ def ui(spaces):
 
 def menu(mode: int = 0, username: str = False):
     ui("\n")
-    modestable = mkmodes()
     if mode == 0:
+        modestable = mkmodes()
         Col.dgprint(center(modestable))
 
     print("\n\n")
@@ -138,6 +138,10 @@ def menu(mode: int = 0, username: str = False):
     if mode == 0:
 
         mode = Col.ginput("-> ")
+
+        if mode == '+':
+            openb("https://github.com/billythegoat356/Ghoul")
+            return menu()
 
         try:
             mode = int(mode)
