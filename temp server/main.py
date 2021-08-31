@@ -1,6 +1,6 @@
 from flask import Flask, redirect, request
 
-from src.database import Database
+from src.database import Database, data
 
 
 app = Flask("Ghoul")
@@ -15,6 +15,10 @@ def main():
 @app.route("/all", methods=['GET'])
 def all():
     return Database.getall()
+
+@app.route("/len", methods=['GET'])
+def glen():
+    return str(len(data))
 
 
 @app.route("/get", methods=['POST'])
