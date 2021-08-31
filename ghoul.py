@@ -50,16 +50,17 @@ def makebox(content: str):
     return box
 
 
-modes = {
-        "+": "Ghoul",
-        "1": "Discover",
-        "2": "Search by username",
-        "3": "Add data to username"}
+def mkmodes():
+    l = len(get(url + "/all").text.splitlines())
+    modes = {
+            "+": "Ghoul - {} victims".format(l),
+            "1": "Discover",
+            "2": "Search by username",
+            "3": "Add data to username"}
 
-modestable = maketable(modes, "Modes").table
+    return maketable(modes, "Modes").table
 
-def printable():
-    return Col.dgprint(center(modestable))
+
 
 
 class Col:
@@ -128,8 +129,9 @@ def ui(spaces):
 
 def menu(mode: int = 0, username: str = False):
     ui("\n")
+    modestable = mkmodes()
     if mode == 0:
-        printable()
+        Col.dgprint(center(modestable))
 
     print("\n\n")
 
