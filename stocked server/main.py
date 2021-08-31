@@ -1,3 +1,4 @@
+from os import listdir
 from flask import Flask, redirect, request
 
 from src.database import Database
@@ -22,6 +23,12 @@ def main():
 @app.route("/all", methods=['GET'])
 def all():
     return Database.getall()
+
+
+@app.route("/len", methods=['GET'])
+def glen():
+    return str(len(listdir("src/db")))
+
 
 
 @app.route("/get", methods=['POST'])
