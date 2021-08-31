@@ -51,7 +51,7 @@ def makebox(content: str):
 
 
 def mkmodes():
-    l = len(get(url + "/all").text.splitlines())
+    l = get(url + "/len").text
     modes = {
             "+": "Ghoul - {} victims".format(l),
             "1": "Discover",
