@@ -33,8 +33,6 @@
 </p>
 
 <br>
-<strong>- When the HTTP server will get restarted and all the data will be deleted</strong>
-<br>
 <strong>- Sometimes the HTTP server (API) is down. Check his availability <a href="https://Ghoul.billythegoat356.repl.co">here</a>, it should redirect you back to this repo</strong>
 <br>
 <strong>- Only accessible from terminal</strong>
@@ -49,7 +47,7 @@
 <p align="center"><strong>Feel free to make a pull request on this repository to submit any idea!</strong</p>
 
 <br><br>
-* Stock the data
+* Host the HTTP server on a VPS/Raspberry PI
 <br><br>
 
 -----
