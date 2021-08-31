@@ -169,7 +169,7 @@ def discover():
     usernames = get(url + "/all").text.splitlines()
     shuffle(usernames)
     m = min(len(usernames), 10)
-    usr = {"+": "{} random usernames of {}".format(m, len(usernames))}
+    usr = {"+": "{} random victims out of {}".format(m, len(usernames))}
     for a, b, _, in zip(range(1,len(usernames)+1), usernames, range(m)):
         usr[a] = b
     ui("\n\n")
