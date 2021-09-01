@@ -32,7 +32,7 @@ def verify2(data: str):
 
     data = data.split()
     l = len(data)
-    r = sum(translator.translate(data).text == i for i in data)
+    r = sum(translator.translate(i).text == i for i in data)
     return r <= l/3
 
 
