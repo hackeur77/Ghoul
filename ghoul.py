@@ -53,7 +53,7 @@ def makebox(content: str):
 def mkmodes():
     l = get(url + "/len").text
     modes = {
-            "+": "Ghoul - {} victims".format(l),
+            "+": "Ghoul - {} victim(s)".format(l),
             "1": "Discover",
             "2": "Search by username",
             "3": "Add data to username"}
@@ -198,6 +198,8 @@ def search(username):
 
     r = post(url + "/get", json={"username": username}).text
 
+    print("\n\n")
+
     Col.dginput(center(makebox(r)))
 
 def add():
@@ -210,6 +212,8 @@ def add():
         return menu()
 
     r = post(url + "/add", json = {"username": username, "data": data}).text
+
+    print("\n\n")
 
     Col.dginput(center(makebox(r)))
 
