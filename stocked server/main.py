@@ -7,13 +7,17 @@ from googletrans import Translator
 
 translator = Translator()
 
+translation = translator.translate("ghoul")
+
+
+# pip install googletrans==3.1.0a0
 
 
 app = Flask("Ghoul")
 port = 8502
 
 
-invalid = """\/:*?"<>|’ !.&%"'"""
+invalid = """\/:*?"<>|’!.&%"'"""
 
 
 def check(username: str):
@@ -97,7 +101,7 @@ def add():
         return "try to change your data a bit, since its already used in another username", 400
     
     if not verify2(data):
-        return "your data contains too many words that are from an unknown language, please try to write corectfully x)", 400
+        return "your data contains too many words that are from an unknown language, please try to write corectly x)", 400
 
     if len(username) > 20:
         return "maximum length of username", 400
