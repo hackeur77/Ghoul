@@ -17,7 +17,7 @@ invalid = """\/:*?"<>|’ !.&%"'"""
 
 
 def check(username: str):
-    return "".join(a.lower() for a in username if a not in invalid)
+    return "".join(a.lower() for a in username.strip() if a not in invalid)
 
 
 def verify1(data: str):
