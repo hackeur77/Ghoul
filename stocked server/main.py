@@ -2,13 +2,10 @@ from flask import Flask, redirect, request
 
 from src.database import Database
 
-
 from googletrans import Translator
 
 
 translator = Translator()
-
-translation = translator.translate("salut")
 
 
 
@@ -35,7 +32,7 @@ def verify2(data: str):
 
     data = data.split()
     l = len(data)
-    r = sum(translator.translate("salut").text == i for i in data)
+    r = sum(translator.translate(data).text == i for i in data)
     return r <= l/3
 
 
@@ -93,8 +90,8 @@ def add():
 
     username = check(username)
 
-    if len(data.split()) < 10:
-        return "data has to be longer than 10", 400
+    if len(data.split()) < 5:
+        return "data has to be longer than 5", 400
 
     if not verify1(data):
         return "try to change your data a bit, since its already used in another username", 400
