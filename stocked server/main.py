@@ -95,13 +95,13 @@ def add():
     username = check(username)
 
     if len(data.split()) < 5:
-        return "data has to be longer than 5", 400
+        return "data has to be longer than 5 words", 400
 
     if not verify1(data):
         return "try to change your data a bit, since its already used in another username", 400
     
     if not verify2(data):
-        return "your data contains too many words that are from an unknown language, please try to write corectly x)", 400
+        return "your data contains too many words that are from an unknown language, please try to write corectly", 400
 
     if len(username) > 20:
         return "maximum length of username", 400
