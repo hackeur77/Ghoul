@@ -19,22 +19,22 @@ class Database:
         for file in listdir('db'):
             file = removesuffix(file, '.txt')
             if file == username:
-                with open('db/'+file+'.txt', 'r', encoding='utf-8') as f:
+                with open('db'+file+'.txt', 'r', encoding='utf-8') as f:
                     return f.read()
         return False
 
     def add(username: str, content: str):
         r = Database.get(username)
         c = "" if r is False else r + "\n\n\n"
-        with open('db/'+username+'.txt', 'w', encoding='utf-8') as f:
+        with open('db'+username+'.txt', 'w', encoding='utf-8') as f:
             f.write(c + get_time() + content)
         return True
 
     def getall():
-        return "\n".join(removesuffix(file, '.txt') for file in listdir('src/db'))
+        return "\n".join(removesuffix(file, '.txt') for file in listdir('db'))
 
     def getlen():
         return str(len(listdir('db')))
 
     def _getall():
-        return ['db/' + file for file in listdir('db')]
+        return ['db' + file for file in listdir('db')]
